@@ -15,6 +15,12 @@ def test_routes(api):
     assert resp.status_code == 301
     assert resp.headers['location'] == 'https://pmac.io/'
 
+    resp = api.requests.get("/", allow_redirects=False, headers={
+        'host': 'pmac.mozillian.dev',
+    })
+    assert resp.status_code == 301
+    assert resp.headers['location'] == 'https://mozillians.org/u/pmac/'
+
     # apex domain is an actual page
     resp = api.requests.get("/", allow_redirects=False, headers={
         'host': 'thepy.dev',

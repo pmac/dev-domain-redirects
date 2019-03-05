@@ -8,7 +8,7 @@
 server {
   listen      [::]:{{ $listen_port }};
   listen      {{ $listen_port }};
-  server_name .thepy.dev .thedjango.dev;
+  server_name .thepy.dev .thedjango.dev .mozillian.dev;
   access_log  /var/log/nginx/{{ $.APP }}-access.log;
   error_log   /var/log/nginx/{{ $.APP }}-error.log;
 {{ if (and (eq $listen_port "80") ($.SSL_INUSE)) }}
@@ -58,7 +58,7 @@ server {
 server {
   listen      [::]:{{ $listen_port }} ssl {{ if eq $.HTTP2_SUPPORTED "true" }}http2{{ else if eq $.SPDY_SUPPORTED "true" }}spdy{{ end }};
   listen      {{ $listen_port }} ssl {{ if eq $.HTTP2_SUPPORTED "true" }}http2{{ else if eq $.SPDY_SUPPORTED "true" }}spdy{{ end }};
-  server_name .thepy.dev .thedjango.dev;
+  server_name .thepy.dev .thedjango.dev .mozillian.dev;
   access_log  /var/log/nginx/{{ $.APP }}-access.log;
   error_log   /var/log/nginx/{{ $.APP }}-error.log;
 
