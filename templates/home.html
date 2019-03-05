@@ -8,7 +8,11 @@
   <head>
     <meta charset="utf-8">
     <title>{{ host }}.dev Redirector</title>
-    <link rel="shortcut icon" href="{{ api.static_url('img/favicon.ico') }}">
+    {% if host == 'mozillian' -%}
+    <link rel="shortcut icon" href="{{ api.static_url('img/mozilla.ico') }}">
+    {% else -%}
+    <link rel="shortcut icon" href="{{ api.static_url('img/python.ico') }}">
+    {% endif %}
     <link rel="stylesheet" href="{{ api.static_url('css/style.css') }}">
   </head>
   <body>
