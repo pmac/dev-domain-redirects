@@ -1,0 +1,23 @@
+{#
+    Template stolen from snippets service home page:
+    https://github.com/mozmeao/snippets-service/blob/master/snippets/base/templates/base/home.jinja
+    Thanks once again to Giorgos!
+-#}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ host }}.dev Redirector</title>
+    <link rel="shortcut icon" href="{{ api.static_url('img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ api.static_url('css/style.css') }}">
+  </head>
+  <body>
+    <h1>{{ host }}.dev</h1>
+    <p>
+      made with <span id="heart">❤</span> by <a href="https://pmac.io/">Paul McLanahan</a>
+    </p>
+    <p>
+      Would you like "&lt;yourname&gt;.{{ host }}.dev" to redirect to your URL? Submit a pull-request to <a href="https://github.com/pmac/dev-domain-redirects">this repo</a>.
+    </p>
+  </body>
+</html>

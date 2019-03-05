@@ -1,3 +1,9 @@
 # Alphabetical mapping of CNames to redirect URLs.
-[cnames]
+
+# for <cname>.thepy.dev
+[thepy]
+pmac = "https://pmac.io/"
+
+# for <cname>.thedjango.dev
+[thedjango]
 pmac = "https://pmac.io/"
