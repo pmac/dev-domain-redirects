@@ -30,4 +30,4 @@ ENV PATH="/venv/bin:$PATH"
 
 COPY --from=builder /venv /venv
 
-COPY app.py ./
+COPY app.py nginx.conf.sigil ./

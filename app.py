@@ -6,7 +6,7 @@ api = responder.API()
 
 @api.route('/', default=True)
 def hello_world(req, resp):
-    api.redirect(resp, 'https://pmac.io/')
+    resp.media = dict(**req.headers)
 
 
 if __name__ == '__main__':
