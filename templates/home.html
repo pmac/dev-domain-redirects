@@ -10,6 +10,8 @@
     <title>{{ host }}.dev Redirector</title>
     {% if host == 'mozillian' -%}
     <link rel="shortcut icon" href="{{ api.static_url('img/mozilla.ico') }}">
+    {% elif host == 'thedjango' -%}
+    <link rel="shortcut icon" href="{{ api.static_url('img/django.ico') }}">
     {% else -%}
     <link rel="shortcut icon" href="{{ api.static_url('img/python.ico') }}">
     {% endif %}
